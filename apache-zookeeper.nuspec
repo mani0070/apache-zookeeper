@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>apache-zookeeper</id>
+    <version>3.4.9</version>
+    <packageSourceUrl>https://github.com/mani0070/apache-zookeeper</packageSourceUrl>
+    <owners>Manimaran Chandrasekaran</owners>
+    <title>apache-zookeeper (Install)</title>
+    <authors>Manimaran Chandrasekaran</authors>
+    <projectUrl>https://zookeeper.apache.org/</projectUrl>
+    <iconUrl>https://www.apache.org/img/asf_logo.png</iconUrl>
+    <copyright>DInventive Ltd</copyright>
+    <licenseUrl>https://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>http://apache.mirror.anlx.net/zookeeper/stable/</projectSourceUrl>
+    <docsUrl>https://cwiki.apache.org/confluence/display/ZOOKEEPER/Index</docsUrl>
+    <tags>apache-zookeeper admin</tags>
+    <summary>Apache zookeeper Installation</summary>
+    <description>This package will install Apache zookeeper</description>
+    <releaseNotes>http://zookeeper.apache.org/doc/r3.4.9/releasenotes.html</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
