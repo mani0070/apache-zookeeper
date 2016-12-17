@@ -1,5 +1,5 @@
 ﻿$ErrorActionPreference = 'Stop';
-
+$tempDir    = "$toolsDir\temp"
 $options = @{
   unzipLocation = 'C:\tools\'
 }
@@ -7,7 +7,6 @@ $options = @{
 $packageParameters = @{
   packageName   = 'apache-zookeeper'
   url           = 'http://apache.mirror.anlx.net/zookeeper/zookeeper-3.4.9/zookeeper-3.4.9.tar.gz'
-  tempDir    = "$toolsDir\temp"
   url64bit      = ''
   softwareName  = 'apache-solr*'
   checksum      = ''
@@ -32,10 +31,12 @@ function Set-ChocolateyPackageOptions {
         }
     }
 }
-Set-ChocolateyPackageOptions $options
-Install-ChocolateyZipPackage $packageParameters['packageName'] $packageParameters['url'] $packageParameters['tempDir'] $packageParameters['url64']
 
+Set-ChocolateyPackageOptions $options
+Install-ChocolateyZipPackage $packageParameters['packageName'] $packageParameters['url'] $tempDir $packageParameters['url64']
+
+$tarFile = Join-Path $tempDir "zookeeper-3.4.9.tar.gz"
 # Untar into tools folder
-Get-ChocolateyUnzip -PackageName $packageParameters['packageName'] -FileFullPath "$packageParameters['tempDir']" -Destination "$options['unzipLocation']"
+Get-ChocolateyUnzip -PackageName $packageParameters['packageName'] -FileFullPath "$tarFile" -Destination $options['unzipLocation']
 
 Export-CliXml -Path (Join-Path $PSScriptRoot 'options.xml') -InputObject $options
