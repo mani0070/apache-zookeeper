@@ -25,12 +25,11 @@ build_script:
 
     }
 after_build:
-  - ps: >- 
+- ps: >- 
     $pkgToTest = Get-ChildItem * -filter *.nupkg | select -First 1
     
     choco install $pkgToTest -y -dv -s ".;chocolatey" # remove the -dv if you don't need debug
 
-	
 artifacts:
 - path: '**/*.nupkg'
 
