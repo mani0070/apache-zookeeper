@@ -1,5 +1,5 @@
 ﻿$ErrorActionPreference = 'Stop';
-$tempDir    = "$toolsDir\temp"
+$tempDir    = "C:\temp"
 $options = @{
   unzipLocation = 'C:\tools\'
 }
@@ -33,9 +33,9 @@ function Set-ChocolateyPackageOptions {
 }
 
 Set-ChocolateyPackageOptions $options
-Install-ChocolateyZipPackage $packageParameters['packageName'] $packageParameters['url'] $tempDir $packageParameters['url64']
+Install-ChocolateyZipPackage -PackageName $packageParameters['packageName'] -Url $packageParameters['url'] -UnzipLocation $tempDir -Url64 $packageParameters['url64']
 
-$tarFile = Join-Path $tempDir "zookeeper-3.4.9.tar.gz"
+$tarFile = Join-Path "$tempDir" "zookeeper-3.4.9.tar.gz"
 # Untar into tools folder
 Get-ChocolateyUnzip -PackageName $packageParameters['packageName'] -FileFullPath "$tarFile" -Destination $options['unzipLocation']
 
