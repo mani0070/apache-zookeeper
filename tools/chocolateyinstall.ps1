@@ -6,13 +6,9 @@ $options = @{
 
 $packageParameters = @{
   packageName   = 'apache-zookeeper'
-  url           = 'http://apache.mirror.anlx.net/zookeeper/zookeeper-3.4.9/zookeeper-3.4.9.tar.gz'
-  url64bit      = ''
-  checksum      = ''
-  checksumType  = 'sha256'
-  checksum64    = ''
-  checksumType64= 'sha256'
-
+  url           = 'http://archive.apache.org/dist/zookeeper/zookeeper-3.4.9/zookeeper-3.4.9.tar.gz'
+  checksum      = '0285717bf5ea87a7a36936bf37851d214a32bb99'
+  checksumType  = 'sha1'
 
 }
 
