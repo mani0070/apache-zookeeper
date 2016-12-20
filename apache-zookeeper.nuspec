@@ -4,7 +4,7 @@
     <id>apache-zookeeper</id>
     <version>3.4.9</version>
     <packageSourceUrl>https://github.com/mani0070/apache-zookeeper</packageSourceUrl>
-    <owners>Manimaran Chandrasekaran</owners>
+    <owners>Apache Software Foundation</owners>
     <title>apache-zookeeper (Install)</title>
     <authors>Manimaran Chandrasekaran</authors>
     <projectUrl>https://zookeeper.apache.org/</projectUrl>
